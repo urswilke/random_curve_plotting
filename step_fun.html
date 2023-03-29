@@ -1,12 +1,17 @@
 <html>
-  <head>
+
+<head>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js">
+    </script>
+    </head>
     <script src="https://d3js.org/d3.v6.min.js"></script>
     <script src="random_fun.js"></script>
     <script type="module">
 
         import * as Plot from "https://cdn.jsdelivr.net/npm/@observablehq/plot@0.6/+esm";
         var data = gen_mult_arrays_flat(3, 4);
-        
+
         document.body.append(
             Plot.plot({
                 color: {
@@ -14,7 +19,7 @@
                 },
                 marks: [
                     Plot.line(data, {
-                        x: "i", 
+                        x: "i",
                         y: "r",
                         curve: "step",
                         stroke: "l"
@@ -31,11 +36,75 @@
             })
 
         );
-        
-        </script>
-  </head>
-  <body>
-    
 
-    </body>
+    </script>
+</head>
+
+<body>
+
+    <fieldset id="scale_notes">
+        <legend>Choose scale notes</legend>
+        <div>
+            <input type="checkbox" id="C" name="C" value="C" checked />
+            <label for="">C</label>
+        </div>
+        <div>
+            <input type="checkbox" id="C#" name="C#" value="C#" />
+            <label for="C#">C#</label>
+        </div>
+        <div>
+            <input type="checkbox" id="D" name="D" value="D" checked />
+            <label for="D">D</label>
+        </div>
+        <div>
+            <input type="checkbox" id="D#" name="D#" value="D#" />
+            <label for="D#">D#</label>
+        </div>
+        <div>
+            <input type="checkbox" id="E" name="E" value="E" checked />
+            <label for="E">E</label>
+        </div>
+        <div>
+            <input type="checkbox" id="F" name="F" value="F" checked />
+            <label for="F">F</label>
+        </div>
+        <div>
+            <input type="checkbox" id="F#" name="F#" value="F#" />
+            <label for="F#">F#</label>
+        </div>
+        <div>
+            <input type="checkbox" id="G" name="G" value="G" checked />
+            <label for="G">G</label>
+        </div>
+        <div>
+            <input type="checkbox" id="G#" name="G#" value="G#" />
+            <label for="G#">G#</label>
+        </div>
+        <div>
+            <input type="checkbox" id="A" name="A" value="A" checked />
+            <label for="A">A</label>
+        </div>
+        <div>
+            <input type="checkbox" id="A#" name="A#" value="A#" />
+            <label for="A#">A#</label>
+        </div>
+        <div>
+            <input type="checkbox" id="B" name="B" value="B" checked />
+            <label for="B">B</label>
+        </div>
+    </fieldset>
+
+    <button onclick="getChecked()">Try it</button>
+
+    <script>
+        function getChecked() {
+            var ids = $("fieldset :checkbox")
+                .filter(function() {return this.checked;})
+                .map(function() {return this.value;})
+                .get();
+        }
+    </script>
+    
+</body>
+
 </html>
