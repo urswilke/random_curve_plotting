@@ -9,22 +9,22 @@
         
         document.body.append(
             Plot.plot({
-            marks: [
-                Plot.line(data, {
-                    x: "i", 
-                    y: "r",
-                    curve: "step",
-                    stroke: "l"
-                }),
-                Plot.text(data, Plot.selectLast({
-                    x: "i",
-                    y: "r",
-                    z: "l",
-                    text: "l",
-                    textAnchor: "start",
-                    dx: 3
-                }))
-            ]
+                marks: [
+                    Plot.line(data, {
+                        x: "i", 
+                        y: "r",
+                        curve: "step",
+                        stroke: "l"
+                    }),
+                    Plot.text(data, Plot.selectLast({
+                        x: "i",
+                        y: "r",
+                        z: "l",
+                        text: "l",
+                        textAnchor: "start",
+                        dx: 3
+                    }))
+                ]
             })
 
         );
@@ -34,18 +34,6 @@
   <body>
     <div class="container"></div>
     
-    <script>
-        // let container;
-        document.open()
-        var data = gen_obj_arr(100);
-        
-        // drawChart('.container',data)
-        
 
-        // onMount(() => {
-        //     const plot = plot_step(data)
-        //     container.appendChild(plot)
-        // })
-      </script>
     </body>
 </html>
