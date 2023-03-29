@@ -29,3 +29,10 @@ function gen_mult_arrays_flat(n, len) {
   return mult_arr.
     flatMap(([l, data]) => data.map(d => ({l, ...d})))
 }
+
+function getChecked() {
+  var ids = $("fieldset :checkbox")
+      .filter(function() {return this.checked;})
+      .map(function() {return this.value;})
+      .get();
+}
