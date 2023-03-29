@@ -5,13 +5,26 @@
     <script type="module">
 
         import * as Plot from "https://cdn.jsdelivr.net/npm/@observablehq/plot@0.6/+esm";
-        var data = gen_obj_arr(100);
+        var data = gen_mult_arrays_flat(3, 4);
         
         document.body.append(
             Plot.plot({
-                marks: [
-                    Plot.lineY(data, {x: "i", y: "r", curve: "step", strokeWidth: 1})
-                ]
+            marks: [
+                Plot.line(data, {
+                    x: "i", 
+                    y: "r",
+                    curve: "step",
+                    stroke: "l"
+                }),
+                Plot.text(data, Plot.selectLast({
+                    x: "i",
+                    y: "r",
+                    z: "l",
+                    text: "l",
+                    textAnchor: "start",
+                    dx: 3
+                }))
+            ]
             })
 
         );

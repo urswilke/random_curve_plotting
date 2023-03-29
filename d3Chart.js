@@ -54,3 +54,18 @@ function gen_obj_arr(len) {
     }
     return x
 }
+
+function gen_mult_arrays(n, len) {
+  let res = new Array(n);
+  for (var i = 0; i < n; i++) {
+    let x = gen_obj_arr(len);
+    res[i] = [i.toString(), x];
+  }
+  return res;
+}
+
+function gen_mult_arrays_flat(n, len) {
+  let mult_arr = gen_mult_arrays(n, len)
+  return mult_arr.
+    flatMap(([l, data]) => data.map(d => ({l, ...d})))
+}
