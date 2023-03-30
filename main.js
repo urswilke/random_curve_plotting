@@ -6,4 +6,4 @@ var allScaleNotes = RndNotes.getAllScaleNotes(scaleNotes);
 
 plotLines(document.body, data, allScaleNotes);
 
-
+document.getElementById("get-notes-button").addEventListener('click', RndNotes.getChecked);
