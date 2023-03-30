@@ -7,7 +7,7 @@ function adaptToSelectedNotes() {
     var allScaleNotes = RndNotes.getAllScaleNotes(scaleNotes);
     plotLines(document.body, data, allScaleNotes);
 }
-
+adaptToSelectedNotes();
 
 
 document.getElementById("get-notes-button").addEventListener('click', adaptToSelectedNotes);
