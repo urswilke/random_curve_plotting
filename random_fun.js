@@ -34,5 +34,26 @@ function getChecked() {
   var ids = $("fieldset :checkbox")
       .filter(function() {return this.checked;})
       .map(function() {return this.value;})
-      .get();
+      .get()
+      .map(Number);
+  document.getElementById("pScaleNotes").innerHTML = ids
+  return ids;
+}
+
+function getAllScaleNotes(steps, rootNote = 60) {
+
+  let rootNoteMin = rootNote % 12;
+  let i = rootNoteMin;
+  let i2 = 0;
+  let x = [];
+  // from here: https://stackoverflow.com/a/50672288
+  repeatedArray = [].concat(...Array(11).fill(steps));
+  octaveArray = [];
+  for (let i = 0; i < repeatedArray.length; i++) {
+    let octave = Math.floor(i / steps.length)
+    octaveArray[i] = repeatedArray[i] + octave * 12;
+    
+  }
+  return octaveArray;
+    
 }
