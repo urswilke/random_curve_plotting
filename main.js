@@ -5,7 +5,6 @@ var data = RndNotes.gen_mult_arrays_flat(10, 30);
 function adaptToSelectedNotes() {
     var scaleNotes = RndNotes.getChecked();
     var allScaleNotes = RndNotes.getAllScaleNotes(scaleNotes);
-    RndNotes.getChecked();
     plotLines(document.body, data, allScaleNotes);
 }
 
