@@ -13,9 +13,10 @@
         var data = gen_mult_arrays_flat(10, 30);
         var scaleNotes = getChecked();
         var allScaleNotes = getAllScaleNotes(scaleNotes);
- 
+
+        function plotLines(parent, data, allScaleNotes) {
         let divWrapper = document.createElement('div');
-        document.body.append(divWrapper);
+        parent.append(divWrapper);
         
         let plotElement = Plot.plot({
             color: {
@@ -40,9 +41,10 @@
             ]
         })
         divWrapper.append(plotElement);
-        document.body.append(
-
-        );
+            
+        }
+        plotLines(document.body, data, allScaleNotes);
+ 
 
     </script>
 </head>
