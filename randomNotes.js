@@ -57,3 +57,4 @@ function getAllScaleNotes(steps, rootNote = 60) {
   return octaveArray;
     
 }
+export {gen_mult_arrays_flat, getChecked, getAllScaleNotes};
