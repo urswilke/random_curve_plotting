@@ -7,7 +7,7 @@ function genRandomByteSequence(len) {
 }
   
 function gen_obj_arr(len) {
-    arr = genRandomByteSequence(len);
+    let arr = genRandomByteSequence(len);
     var x = new Array(arr.length);
     for (var i = 0; i < arr.length; i++) {
         x[i] = {i: i, r: arr[i]};
@@ -47,8 +47,8 @@ function getAllScaleNotes(steps, rootNote = 60) {
   let i2 = 0;
   let x = [];
   // from here: https://stackoverflow.com/a/50672288
-  repeatedArray = [].concat(...Array(11).fill(steps));
-  octaveArray = [];
+  let repeatedArray = [].concat(...Array(11).fill(steps));
+  let octaveArray = [];
   for (let i = 0; i < repeatedArray.length; i++) {
     let octave = Math.floor(i / steps.length)
     octaveArray[i] = repeatedArray[i] + octave * 12;
