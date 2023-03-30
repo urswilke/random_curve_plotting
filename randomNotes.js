@@ -31,7 +31,7 @@ function gen_mult_arrays_flat(n, len) {
 }
 
 function getChecked() {
-  var ids = $("fieldset :checkbox")
+  let ids = $("fieldset :checkbox")
       .filter(function() {return this.checked;})
       .map(function() {return this.value;})
       .get()
