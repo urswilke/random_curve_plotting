@@ -1,8 +1,5 @@
 import * as Plot from "https://cdn.jsdelivr.net/npm/@observablehq/plot@0.6/+esm";
 export default function plotLines(parent, data, allScaleNotes) {
-    let divWrapper = document.createElement('div');
-    parent.append(divWrapper);
-
     let plotElement = Plot.plot({
         color: {
             type: "categorical"
@@ -25,6 +22,6 @@ export default function plotLines(parent, data, allScaleNotes) {
             }))
         ]
     })
-    divWrapper.append(plotElement);
-    
+    document.getElementById('stepPlot').innerHTML = '';
+    document.getElementById("stepPlot").appendChild(plotElement)
 }
