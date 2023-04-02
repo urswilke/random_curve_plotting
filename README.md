@@ -1,5 +1,5 @@
-#  Synthesize random numbers into sound 
+# Plot random curves
 
-This is a showcase of the [*chaos machine*](https://gitlab.com/urswilke/chaos_machine_code) project. You can find the result [here](https://urswilke.github.io/chaos_synthetization/).
+This is a showcase how to plot random curves with javascript. You can find the result [here](https://urswilke.github.io/random_curve_plotting/).
 
-In the [*chaos machine*](https://gitlab.com/urswilke/chaos_machine_code) project we used an arduino with thermometers and python code to generate chaotic sound. Preliminary studies were done in R. As you need all the hardware (arduino) and install software to see, hear and experience the results in that project, [this website](https://urswilke.github.io/chaos_synthetization/) is designed to demonstrate the core ideas in your browser.
+The further development was moved to the project [chaos_synthetization](https://github.com/urswilke/chaos_synthetization).
